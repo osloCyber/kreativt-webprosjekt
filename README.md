@@ -10,4 +10,4 @@ Temaet for prosjektet var "Årstider". Løsningen er en kreativ og interaktiv HT
 - CSS (inkludert animasjoner)
 
 ## Begrensninger
-Prosjektet ble utviklet uten bruk av JavaScript, rammeverk eller eksterne biblioteker – kun ren håndkodet HTML og CSS.
+Prosjektet ble utviklet uten bruk av JavaScript, rammeverk eller eksterne biblioteker - kun ren håndkodet HTML og CSS.
