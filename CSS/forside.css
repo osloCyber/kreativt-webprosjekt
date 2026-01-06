@@ -1,0 +1,90 @@
+body {
+  background-image: url("../IMGS/forestseasonsfeattt.png"); /* Legger til bakgrunnsbilde */
+  background-size: cover; /* Bildet dekker hele skjermen */
+  background-repeat: no-repeat; /* Bildet gjentas ikke */
+  background-position: center; /* Plasserer bildet midt på skjermen */
+  height: 100vh; /* Fyll hele høyden på skjermen */
+  overflow: hidden; /* Skjuler ting som går utenfor skjermen */
+}
+
+#overskrift {
+  color: #ecece3; /* Tekstfarge */
+  font-size: 2.6em; /* Tekststørrelse for overskriften */
+  text-align: center; /* Sentraliserer teksten */
+  margin-top: 20px; /* Liten margin over teksten */
+  padding: 15px; /* Ekstra plass rundt teksten */
+  left: 50%; /* Plasserer teksten mot venstre */
+  top: 20%; /* Plasserer teksten fra toppen */
+  transform: translate(-50%, -50%); /* Sentrerer teksten */
+  position: absolute; /* Absolutt posisjon */
+  text-shadow: 10px 5px 10px rgb(10, 134, 30); /* Skygge bak teksten */
+  font-family: cursive; /* Font */
+  background-color: rgba(6, 110, 16, 0.8); /* Grønn bakgrunn med gjennomsiktighet */
+  border-radius: 5px; /* Runde kanter på bakgrunnen */
+}
+
+#button a {
+  width: 150px; /* Knappens bredde */
+  padding: 15px; /* Plass rundt knappeteksten */
+  background-color: rgba(6, 110, 16, 0.8); /* Grønn bakgrunn med gjennomsiktighet */
+  color: white; /* Hvit tekst */
+  border-radius: 5px; /* Runde hjørner */
+  cursor: pointer; /* Muspekeren endres til hånd ved hover */
+  font-size: 16px; /* Størrelse på teksten */
+  margin: 100px auto; /* Sentrer og flytter knappen litt ned */
+  text-align: center; /* Sentrerer knappeteksten */
+  text-decoration: none; /* Ingen understreking på lenken */
+  top: 50%; /* Plasserer knappen midt på skjermen */
+  position: absolute; /* Absolutt posisjon */
+  left: 50%; /* Flytter knappen mot venstre */
+  transform: translate(-50%, -50%); /* Sentrerer knappen */
+  font-family: cursive; /* Font */
+}
+
+#eagle {
+   left: 100%; /* Mot venstre */
+   top: 30%; /*  Høyden på ørnen */
+   position: absolute;
+   transform: translate(-50%, -50%); /* Sentrerer ørnen */
+   width: 150px; /* Bredde */
+   height: 150px; /* Høyde */
+   animation: eagleBevegelse 12s linear infinite; /* Hvor fort ørenen skal bevege seg */
+  
+}
+
+#eagle img {
+   width: 100%; /* Bredde */
+   height: 100%; /* Høyde */
+   transition: transform 0.3s ease-in-out; /* Overgang ved hover */
+}
+
+#eagle:hover img {
+   transform: scale(1.2); /* Zoomer inn når du holder musen over */
+}
+
+/* Keyframes for å få ørnen til å sveve fra høyre til venstre og litt og ned */
+@keyframes eagleBevegelse {
+    0% {
+        left: 110%;  /* Hvilken vei den beveger seg mot */
+        top: 30%;  /* Høyde den beveger seg i */
+    }
+    25% {
+        left: 75%; 
+        top: 20%; 
+    }
+    50% {
+        left: 50%; 
+        top: 50%;
+    }
+    75% {
+        left: 25%; 
+        top: 40%; 
+    }
+    100% {
+        left: -10%; 
+        top: 20%;
+    }
+}
+
+
+ 

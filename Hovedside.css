@@ -1,0 +1,572 @@
+/*sexy Body som gjør at det ikke er mulig å scrolle og padding er fjernet*/
+body{
+    padding: 0; 
+    overflow: hidden; 
+    margin: 0; 
+    z-index: 0;
+}
+/*Fordi vår er default side så må jeg gjøre at den ikke vises når de andre sidene er aktive*/
+#sommer:target ~ #vårBakgrunn {display: none;}
+#høst:target ~ #vårBakgrunn {display: none;}
+#vinter:target ~ #vårBakgrunn {display: none;}
+
+/*Disse 4 er for å dele skjermen opp i 4 deler som du kan trykke for å bytte årstider, trykk på personen for å bytte 1 årstid om gangen*/
+#vår {
+    left: 0%; 
+    top: 0%; 
+    height: 100vh; 
+    width: 25%; 
+    background-color: green; 
+    position: absolute; 
+    opacity: 0%;
+    z-index: 20;
+    display: block;    
+}
+
+
+#sommer {
+    left: 25%; 
+    top: 0%; 
+    height: 100vh; 
+    width: 25%; 
+    background-color: blue; 
+    position: absolute; 
+    opacity: 0%;
+    z-index: 20;
+    display: block;
+}
+
+#høst {
+    left: 50%; 
+    top: 0%; 
+    height: 100vh; 
+    width: 25%; 
+    background-color: red; 
+    position: absolute; 
+    opacity: 0%;
+    z-index: 20;
+    display: block;
+}
+
+#vinter {
+    left: 75%; 
+    top: 0%; 
+    height: 100vh; 
+    width: 25%; 
+    background-color: yellow; 
+    position: absolute; 
+    opacity: 0%;
+    z-index: 20;   
+    display: block; 
+}
+
+/*Her er div med all content for hver årstid, alle untatt vår er usynlig by default til :target på riktig årstid skjer*/
+#vårBakgrunn {
+    left: 0%; 
+    top: 0%; 
+    height: 100vh; 
+    width: 100vw; 
+    background-color: rgb(126, 218, 221); 
+    display: block;
+    z-index: 1;
+}
+
+#sommerBakgrunn {
+    left: 0%; 
+    top: 0%; 
+    height: 100vh; 
+    width: 100vw; 
+    background-color: rgb(66, 182, 218); 
+    display: none;
+    z-index: 2;
+}
+
+#høstBakgrunn {
+    left: 0%; 
+    top: 0%; 
+    height: 100vh; 
+    width: 100vw; 
+    background-color: rgb(35, 134, 176); 
+    display: none;
+    z-index: 2;
+}
+
+#vinterBakgrunn {
+    left: 0%; 
+    top: 0%; 
+    height: 100vh; 
+    width: 100vw; 
+    background-color: rgb(25, 25, 144); 
+    display: none;
+    z-index: 2;
+}
+/*Gresstekstur for hver årstid*/
+#sommerGress {
+    top: 70%; 
+    left: 0%; 
+    width: 100vw; 
+    height: 300px; 
+    background-image: url(../IMGS/Gress.png);
+    background-size: 10%; 
+    position:absolute}
+
+#høstGress {
+    top: 70%; 
+    left: 0%; 
+    width: 100vw; 
+    height: 300px; 
+    background-image: url(../IMGS/GressHøst.png); 
+    background-size: 10%; 
+    position:absolute}
+
+#vinterGress {
+    top: 70%; 
+    left: 0%; 
+    width: 100vw; 
+    height: 300px; 
+    background-image: url(../IMGS/GressVinter.png); 
+    background-size: 10%; 
+    position:absolute}
+
+#vårGress {
+    top: 70%; 
+    left: 0%; 
+    width: 100vw;
+    height: 300px; 
+    background-image: url(../IMGS/VårGress.png); 
+    background-size: 10%; 
+    position:absolute}
+
+/*Tre for hver årstid*/
+#treVår {
+    top: 35%; 
+    left: 70%; 
+    background-image: url(../IMGS/treVår.png); 
+    position: absolute; 
+    z-index: 9; 
+    background-size: cover; 
+    width: 300px; 
+    height: 300px; 
+    scale: 2;}
+
+#treSommer {
+    top: 35%; 
+    left: 70%; 
+    background-image: url(../IMGS/treSommer.png); 
+    position: absolute; 
+    z-index: 23; 
+    background-size: cover; 
+    width: 300px; 
+    height: 300px; 
+    scale: 2;}
+
+#treHøst {
+    top: 35%; 
+    left: 70%; 
+    background-image: url(../IMGS/treHøst.png); 
+    position: absolute; 
+    z-index: 9; 
+    background-size: cover; 
+    width: 300px; 
+    height: 300px; 
+    scale: 2;}
+    
+#treVinter {
+    top: 35%; 
+    left: 70%; 
+    background-image: url(../IMGS/treVinter.png); 
+    position: absolute; 
+    z-index: 9; 
+    background-size: cover; 
+    width: 300px; 
+    height: 300px; 
+    scale: 2;}
+
+/*Et hemmelig monster nede I høyre hjørne som dukker opp med :hover*/
+#monster {
+    top: 70%; 
+    left: 90%; 
+    background-image: url(../IMGS/Monstercan.png); 
+    position: absolute; 
+    z-index: 9; 
+    background-size: cover; 
+    width: 200px; 
+    height: 200px;
+    z-index: 26;   
+    opacity: 0%; 
+}
+
+/*Ekorn på vårårstiden*/
+#ekorn {
+    width: 300px;
+    height: 200px;
+    top: 55%;
+    left: 50%;
+    background-image: url(../IMGS/ekorn.png);
+    position: absolute;
+    z-index: 21;
+    background-size: cover;
+    scale: 40%;
+}
+
+/*Både hover funksjon og keyframe for at monster skal dukke opp og bevege seg*/
+#monster:hover {
+    animation-name: monsterHover;
+    animation-duration: 1s;
+}
+
+    @keyframes monsterHover {
+        0% {rotate: 0deg; opacity: 100%;}
+        100% {rotate: 360deg; opacity: 100%;}
+    }
+/*Hover og keyframe for å sprenge ekornet*/
+#ekorn:hover {
+    animation-name: ekornHover;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+    @keyframes ekornHover {
+        0% {transform: scale(1);}
+        75% {transform: scale(2); background-image: url(../IMGS/eksplosjon.png);}
+        100% {transform: scale(2); opacity: 0%;}
+    }
+/*Funksjon og keyframes for å få årstiden til å skifte og for at bakgrunnen skal endre farge*/
+#vår:target ~ #vårBakgrunn {
+    display: block;
+    animation-name: vårNattDag;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+}
+#sommer:target ~ #sommerBakgrunn {
+    display: block;
+}
+
+#sommer:target ~ #sommerBakgrunn {
+    display: block;
+    animation-name: sommerNattDag;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;}
+
+#høst:target ~ #høstBakgrunn {
+    display: block;
+}
+
+#høst:target ~ #høstBakgrunn {
+    display: block;
+    animation-name: høstNattDag;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;}
+
+#vinter:target ~ #vinterBakgrunn {
+    display: block;
+}
+
+#vinter:target ~ #vinterBakgrunn {
+    display: block;
+    animation-name: vinterNattDag;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;}
+
+@keyframes vårNattDag {
+    0% {background-color: rgb(234, 216, 80);}
+    25% {background-color: rgb(250, 255, 176);}
+    50% {background-color: rgb(97, 201, 210);}
+    75% {background-color: rgb(224, 130, 53);}
+    100% {background-color: rgb(126, 218, 221)}
+}
+@keyframes sommerNattDag {
+    0% {background-color: rgb(28, 115, 197);}
+    25% {background-color: rgb(105, 203, 210);}
+    50% {background-color: rgb(26, 59, 149);}
+    75% {background-color: rgb(49, 138, 222);}
+    100% {background-color:rgb(66, 182, 218);}
+}
+@keyframes høstNattDag {
+    0% {background-color: rgb(234, 216, 80);}
+    25% {background-color: rgb(250, 255, 176);}
+    50% {background-color: rgb(97, 201, 210);}
+    75% {background-color: rgb(224, 130, 53);}
+    100% {background-color: rgb(126, 218, 221)}
+}
+@keyframes vinterNattDag {
+    0% {background-color: rgb(234, 216, 80);}
+    25% {background-color: rgb(250, 255, 176);}
+    50% {background-color: rgb(97, 201, 210);}
+    75% {background-color: rgb(39, 5, 147);}
+    100% {background-color: rgb(25, 25, 144)}
+}
+
+
+/*Keyframe for barnet som gjør at det vokser opp*/
+@keyframes endreBarneBilde {
+    0%{
+        background-image: url(../IMGS/meneskeBaby.png);
+        top: 55%;
+        left: 5%;
+        opacity: 1;
+        transform: scale(0.5); 
+    }
+    20% {
+        background-image: url(../IMGS/meneskeBaby.png);
+        top: 55%;
+        left: 5%;
+        opacity: 1; 
+        transform: scale(0.5);
+    }
+    25% {
+        background-image: url(../IMGS/meneskeBaby.png);
+        top: 55%;
+        left: 5%;
+        opacity: 0;
+        transform: scale(0.5);
+         
+    }
+    26%{
+        background-image: url(../IMGS/menneskeBarn.png);
+        top: 55%;
+        left: 10%;
+        opacity: 0; 
+        transform: scale(0.7);
+    }
+    40% {
+        background-image: url(../IMGS/menneskeBarn.png);
+        top: 55%;
+        left: 10%;
+        opacity: 1; 
+        transform: scale(0.7);
+    }
+    60% {
+        background-image: url(../IMGS/menneskeBarn.png);
+        top: 55%;
+        left: 10%;
+        opacity: 1; 
+        transform: scale(0.7);
+    }
+    65% {
+        background-image: url(../IMGS/menneskeBarn.png);
+        top: 55%;
+        left: 10%;
+        opacity: 0; 
+        transform: scale(0.7);
+    }
+    66%{
+        background-image: url(../IMGS/menneskeBarn2.png);
+        top: 55%;
+        left: 15%;
+        opacity: 0; 
+        transform: scale(1);
+    }
+    80%{
+        background-image: url(../IMGS/menneskeBarn2.png);
+        top: 55%;
+        left: 15%;
+        opacity: 1; 
+    }
+
+    100% {
+       background-image: url(../IMGS/menneskeBarn2.png);
+       top: 55%;
+       left: 15%;
+       opacity: 1;
+    }
+}
+/*Funksjon for å kunne bytte årstid med å trykke på person*/
+#mannVår {
+    background-image: url(../IMGS/meneskeBaby.png);
+    position: absolute;
+    background-size: cover;
+    width: 150px;
+    height: 250px;
+    top: 50%;
+    left: 10%;
+    z-index: 21;
+    animation: endreBarneBilde 6s forwards ease-in-out;
+}
+
+#mannSommer {
+    background-image: url(../IMGS/menneskeVoksen.png);
+    position: absolute;
+    background-size: cover;
+    width: 120px;
+    height: 200px;
+    top: 55%;
+    left: 30%;
+    z-index: 21;
+}
+
+#mannHøst {
+    background-image: url(../IMGS/menneskeEldre.png);
+    position: absolute;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+    top: 55%;
+    left: 40%;
+    z-index: 21;
+}
+
+
+#mannVinter {
+    background-image: url(../IMGS/menneskeEldst.png);
+    position: absolute;
+    background-size: cover;
+    width: 150px;
+    height: 250px;
+    top: 60%;
+    left: 55%;
+    z-index: 21;
+}
+/*funksjoner og keyframes for 3 kombinerte bilder som lager en snøeffekt*/
+#snoEn, #snoTo, #snoTre {
+    background-image: url(../IMGS/snø1.png);
+    z-index: 8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    opacity: 0;
+    animation-name: snøFaller;
+    animation-duration: 9s;
+    animation-iteration-count: 10;
+    animation-timing-function: ease-in-out; 
+}
+
+#snoTo {
+    animation-delay: 3s;
+}
+#snoTre {
+    animation-delay: 6s;
+    z-index: 14;
+}
+
+@keyframes snøFaller {
+    0% {
+        opacity: 0;
+        top: -400px;
+        transform: translateX(0);
+        
+    }
+    25%{
+        opacity: 1;
+        top: -300px;
+        transform: translateX(-10px);
+    }
+    50%{
+        opacity: 1;
+        top: -200px;
+        transform: translateX(10px);
+    }
+    75%{
+        opacity: 1;
+        top: -100px;
+        transform: translateX(-10px);
+    }
+    
+    100% {
+        opacity: 0.75;
+        top: 0px;
+        transform: translateX(0);
+    }
+}
+
+/*Gresskar, hover funksjon for gresskar og keyframe som endre gresskar til et skummelt gresskar*/
+#gresskar {
+    background-image: url(../IMGS/gresskar.png);
+    width: 160px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    z-index: 25;
+    background-size: cover;
+    scale: 2;
+}
+
+#gresskar:hover {
+   animation-name: gresskarSkummel;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes gresskarSkummel {
+    0% {}
+    25% {rotate: -35deg;}
+    50% {rotate: 35deg}
+    75% {rotate: 0deg;}
+    100%{background-image: url(../IMGS/gresskarmedfjes.png);}
+}
+/*Sol på sommerårstid og keyframe som får den til å bevege seg som om det blir kveld så morgen igjen*/
+#sol{
+    left: 50%;
+    top: 8%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius:50%;
+    width: 70px;
+    height:70px;
+    background-color: orange;
+    box-shadow: 0 0 35px 5px yellow,0 0 25px 10px yellow inset;
+    animation-name: solBevegelse;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation: solBevegelse 15s linear ;
+    z-index: 23;
+  }
+
+  @keyframes solBevegelse{
+    0% {left: -5%; top: 20%;}
+    16% {left: 25%; top: 13%;}
+    33%{left: 50%; top: 8%;}
+    48% {left:75%; top: 10%;}
+    66% {left:105%; top: 20%;}
+    67% {left: 105%; opacity: 100%;}
+    68% {left: 105%; opacity: 0%;}
+    69% {left: -5%; opacity: 0%;}
+    70%{left: -5%; opacity: 100%;}
+    100% {left:50%; top: 8%;}
+  }
+/*Telt med hover funksjon og keyframe som gir effekten at noen er inne i teltet*/
+  #telt {
+    width: 380px;
+    height: 200px;
+    top: 55%;
+    left: 50%;
+    background-image: url(../IMGS/telt.png);
+    position: absolute;
+    z-index: 21;
+    background-size: cover;
+    scale: 0.7;
+  }
+
+#telt:hover {
+    animation-name: teltHover;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes teltHover {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+/*Hover for sol, som gjør den litt større*/
+#sol:hover {
+    scale: 1.2;
+    transform: translate(-35%, -35%);
+}
+/*Snømann*/
+#snømann {
+    background-image: url(../IMGS/snømann.png);
+    width: 150px;
+    height: 200px;
+    left: 10%;
+    top: 50%;
+    position: absolute;
+    z-index: 24;
+    background-size: cover;
+}

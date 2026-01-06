@@ -1,0 +1,104 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    color: white;
+    background-color: black; 
+}
+
+/*Effekt som gjør at bakgrunnsbildene rullerer fra vår til vinter*/
+
+@keyframes changeBackground {
+    0% {
+        background-image: url('../IMGS/vår.jpg'); 
+    }
+    25% {
+        background-image: url('../IMGS/sommer.jpg'); 
+    }
+    50% {
+        background-image: url('../IMGS/høst.jpg'); 
+    }
+    75% {
+        background-image: url('../IMGS/vinter.jpg');
+    }
+    100% {
+        background-image: url('../IMGS/vår.jpg'); 
+    }
+}
+
+/*Bakgrunnen går i loop uendelig og hele bakgrunnsvisningen varer i 16 sekunder før det starter på nytt*/
+
+body {
+    background-size:cover; 
+    background-position: center; 
+    animation: changeBackground 16s infinite; 
+    background-repeat: no-repeat;
+}
+
+/*Gjennomsiktig boks bak teksten som gjør at teksten blir mer synlig foran den bevegende bakgrunnen*/
+
+.container {
+    text-align: center;
+    padding: 50px;
+    width: 80%;
+    margin: 10% auto;
+    color: white;
+    background-color: rgba(83, 83, 77, 0.503); 
+    border-radius: 10px;
+}
+
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+/* Satte main-image i div container for å lettere plassere han*/
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    
+}
+/*Bilde av Morten over knappen som indikerer at man skal hjelpe han på neste side*/
+.main-image { 
+    max-width: 300px;
+    height: auto; 
+    position: relative;
+    top: 60px;
+    left: 70px;
+    z-index: 0; 
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.button {
+    display:inline-block;
+    padding: 5px 20px;
+    font-size: 1em;
+    color: white;
+    text-decoration: none; 
+    background-color: #167bd3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+/*Knappen skifter farge når man hovrer over den*/
+.button:hover {
+    background-color: #f58905; 
+}
+
+
